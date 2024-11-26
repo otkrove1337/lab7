@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rozklad</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="/css/print.css" media="print">
+
+</head>
+
+<body>
+    <div class="content">
+        <header class="site-header">
+            <div id="header"></div>
+        </header>
+    </div>
+    <section>
+        <table class="table">
+            <tr class="table__header">
+                <th class="table__cell table__time-cell">Час</th>
+                <th class="table__cell table__time-cell">Понеділок</th>
+                <th class="table__cell table__time-cell">Вівторок</th>
+                <th class="table__cell table__time-cell">Середа</th>
+                <th class="table__cell table__time-cell">П'ятниця</th>
+                <th class="table__cell table__time-cell">Субота</th>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">11:25</td>
+                <td class="table__cell">-</td>
+                <td class="table__cell">Візуальні мови програмування/<br>Мови програмування моб. пристроїв</td>
+                <td class="table__cell">-</td>
+                <td class="table__cell">-</td>
+                <td class="table__cell">08:00 Соціологія</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">12:55</td>
+                <td class="table__cell">Веб-програмування</td>
+                <td class="table__cell">Візуальні мови програмування</td>
+                <td class="table__cell">Системи віртуалізації та контейнерізації</td>
+                <td class="table__cell">-</td>
+                <td class="table__cell">09:35 Інтернет бізнес</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">14:30</td>
+                <td class="table__cell">Аналіз вимог до програмного забезпечення</td>
+                <td class="table__cell">-</td>
+                <td class="table__cell">Веб-програмування</td>
+                <td class="table__cell">-</td>
+                <td class="table__cell">-</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">16:05</td>
+                <td class="table__cell">Системи віртуалізації та контейнерізації/</td>
+                <td class="table__cell">-</td>
+                <td class="table__cell">Аналіз вимог до програмного забезпечення</td>
+                <td class="table__cell">Системи віртуалізаціїта контейнерізації</td>
+                <td class="table__cell">-</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">17:40</td>
+                <td class="table__cell">-</td>
+                <td class="table__cell">-</td>
+                <td class="table__cell">-</td>
+                <td class="table__cell">Мови програмування моб. пристроїв</td>
+                <td class="table__cell">-</td>
+            </tr>
+        </table>
+    </section>
+    <p></p>
+    <section>
+        <table class="table">
+            <tr class="table__header">
+                <th class="table__cell table__subject-cell">Предмет</th>
+                <th class="table__cell table__subject-cell">Викладач</th>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Веб-програмування</td>
+                <td class="table__cell">Дребезов Денис Олегович / Ракша Владислав Ігорович</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Аналіз вимог до програмного забезпечення</td>
+                <td class="table__cell">Мильцев Олександр Михайлович</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Системи віртуалізаціїта контейнерізації</td>
+                <td class="table__cell">Лісняк Андрій Олександрович / Мухін Віталій Вікторович</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Візуальні мови програмування</td>
+                <td class="table__cell">Красікова Ірина Володимирівна / Ткаченко Ірина Григорівна</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Мови програмування мобільних пристроїв</td>
+                <td class="table__cell">Дребезов Денис Олегович</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Соціологія</td>
+                <td class="table__cell">Бондаренко Олег Валерійович</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Інтернет бізнес</td>
+                <td class="table__cell">Давиденко Оксана Олександрівна</td>
+            </tr>
+        </table>
+    </section>
+    <footer>
+        <div id="footer"></div>
+    </footer>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+</body>
+
+</html>

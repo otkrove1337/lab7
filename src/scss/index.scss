@@ -1,0 +1,146 @@
+@import "normalize.scss";
+
+body {
+    background: linear-gradient(45deg, #BDF400, #98B72E, #7B9E00, #CFF93E, #DBF970);
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+// Основні стилі для тексту і посилань
+  
+h1, h2, h3 {
+    color: #000;
+}
+  
+a {
+    color: #2d2d2d;
+    text-decoration: none;
+}
+  
+a:hover {
+    color: #DBF970;
+}
+
+footer{
+    text-align: center;
+}
+
+.header__nav{
+    font-size: large;
+    font-weight: bold;
+}
+.news-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.news-item {
+    background-color: #DEF9BD;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    h4 {
+        margin-top: 0;
+        font-size: 1.2em;
+        color: #007bff;
+    }
+    p {
+        font-size: 0.9em;
+        color: #555;
+    }
+}
+// Common table styles
+.table {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: black;
+    border-collapse: collapse;
+    text-align: center;
+  
+    &__header {
+      background-color: grey;
+      color: white;
+    }
+  
+    &__row {
+      background-color: lightgrey;
+  
+      &:nth-child(even) {
+        background-color: #d3d3d3; // Slightly different shade for visual distinction
+      }
+    }
+  
+    &__cell {
+      padding: 10px;
+    }
+  
+    // Specific widths for certain cells
+    &__time-cell {
+      width: 200px;
+    }
+  
+    &__subject-cell {
+      width: 600px;
+    }
+}
+  
+
+.news-date {
+    font-size: 0.8em;
+    color: #888;
+}
+
+.news-link {
+    color: #4A8106;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-link:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+.news-item img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.section-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+.figure {
+    display: inline-block;
+    text-align: center;
+    width: auto;
+  
+    &__image {
+      width: 150px;
+      height: 150px;
+    }
+  
+    &__caption {
+      text-align: center;
+      margin-top: 8px;
+    }
+}
+  

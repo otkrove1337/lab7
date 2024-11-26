@@ -1,0 +1,38 @@
+@media print {
+  /* Show only the title, header, and content */
+  body * {
+    display: none !important;
+  }
+
+  .header__title, header, .content {
+    display: block !important;
+  }
+
+  /* Hide site footer */
+  footer {
+    display: none !important;
+  }
+
+  /* Remove background images and colors */
+  * {
+    background: none !important;
+    color: black !important;
+  }
+
+  /* Show full URLs for links */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+  }
+
+  /* Use serif fonts */
+  body {
+    font-family: "Times New Roman", Georgia, Palatino, serif;
+  }
+
+  /* Set margins for print */
+  @page {
+    margin: 50px;
+  }
+}
+  
